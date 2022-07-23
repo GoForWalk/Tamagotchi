@@ -7,34 +7,29 @@
 
 import UIKit
 
-class SelectPetCollectionViewCell: UICollectionViewCell {
-    
+class SelectPetCollectionViewCell: UICollectionViewCell, NameLabelSet, ImageSet {
+        
     static let identifier = "SelectPetCollectionViewCell"
     
     @IBOutlet weak var petImageView: UIImageView!
-    @IBOutlet weak var petNameLabel: UILabel!
-    
-    func configureCell() {
-        setPetImageUI()
-        setPetNameLabel()
-    }
-    
-    func setPetImageUI() {
-        petImageView.layer.cornerRadius = petImageView.frame.height/2
-        petImageView.layer.borderColor = UISet.fontColor.cgColor
-        petImageView.layer.borderWidth = 2
-        petImageView.clipsToBounds = true
-        petImageView.image = UIImage(named: UISet.noImage)
-    }
+    @IBOutlet weak var petNameLabel: NameLabel!
+        
+    func configureCell(pet: Pet? = nil) {
+        setImageViewToCircle(imageView: petImageView)
+        setNameLabel(nameLabel: petNameLabel)
 
-    func setPetNameLabel() {
-        petNameLabel.clipsToBounds = true
-        petNameLabel.text = "준비중이에요"
-        petNameLabel.textAlignment = .center
-        petNameLabel.layer.borderWidth = 1
-        petNameLabel.layer.borderColor = UISet.fontColor.cgColor
-        petNameLabel.textColor = UISet.fontColor
-        petNameLabel.layer.cornerRadius = 8
+        guard let pet = pet else {
+            petImageView.image = UIImage(named: UISet.noImage)
+            petNameLabel.text = "준비중이에요"
+            return
+        }
+        
+        setPetInfo(pet: pet)
+    }
+        
+    func setPetInfo(pet: Pet) {
+        petImageView.image = UIImage(named: pet.presentationImageName)
+        petNameLabel.text = "\(pet.petType) 다마고치"
     }
     
 }

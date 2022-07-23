@@ -9,15 +9,12 @@ import Foundation
 
 struct PetDB {
     
-    var bossName: String
-    var currentPet: Pet
+    var bossName: String = "대장님"
+    var currentPet: Pet?
     
     var petList: [Pet] = [
         Pet(petType: .따끔따끔),
         Pet(petType: .반짝반짝),
         Pet(petType: .방실방실)
     ]
-    
-    
-    
 }

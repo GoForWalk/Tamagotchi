@@ -8,7 +8,7 @@
 import Foundation
 
 enum PetType: Int{
-    case 따끔따끔
+    case 따끔따끔 = 1
     case 방실방실
     case 반짝반짝
     
@@ -31,6 +31,10 @@ struct Pet {
     
     var imageName: String {
         return "\(petType.rawValue)-\(lv == 10 ? lv - 1 : lv)"
+    }
+    
+    var presentationImageName: String {
+        return "\(petType.rawValue)-6"
     }
     
     var talk: [String] = [

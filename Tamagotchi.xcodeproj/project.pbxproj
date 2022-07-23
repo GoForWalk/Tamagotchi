@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		CF266EDB288BCC37009D64C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF266EDA288BCC37009D64C5 /* AppDelegate.swift */; };
 		CF266EDD288BCC37009D64C5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF266EDC288BCC37009D64C5 /* SceneDelegate.swift */; };
-		CF266EDF288BCC37009D64C5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF266EDE288BCC37009D64C5 /* ViewController.swift */; };
 		CF266EE4288BCC3A009D64C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF266EE3288BCC3A009D64C5 /* Assets.xcassets */; };
 		CF266EE7288BCC3A009D64C5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF266EE5288BCC3A009D64C5 /* LaunchScreen.storyboard */; };
 		CF266EEF288BCDD1009D64C5 /* Pet.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF266EEE288BCDD1009D64C5 /* Pet.swift */; };
@@ -18,13 +17,15 @@
 		CF266EF5288BD422009D64C5 /* Tamagotchi.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF266EF4288BD422009D64C5 /* Tamagotchi.storyboard */; };
 		CF266EF7288BD462009D64C5 /* SelectPetCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF266EF6288BD462009D64C5 /* SelectPetCollectionViewController.swift */; };
 		CF266EF9288BD504009D64C5 /* SelectPetCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF266EF8288BD504009D64C5 /* SelectPetCollectionViewCell.swift */; };
+		CFA26FC1288BFEC0007BF8FC /* PopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA26FC0288BFEC0007BF8FC /* PopupViewController.swift */; };
+		CFA26FC3288C0536007BF8FC /* UIProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA26FC2288C0536007BF8FC /* UIProtocol.swift */; };
+		CFA26FC5288C4C84007BF8FC /* MainPetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA26FC4288C4C84007BF8FC /* MainPetViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CF266ED7288BCC37009D64C5 /* Tamagotchi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tamagotchi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF266EDA288BCC37009D64C5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CF266EDC288BCC37009D64C5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CF266EDE288BCC37009D64C5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CF266EE3288BCC3A009D64C5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CF266EE6288BCC3A009D64C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CF266EE8288BCC3A009D64C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -34,6 +35,9 @@
 		CF266EF4288BD422009D64C5 /* Tamagotchi.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tamagotchi.storyboard; sourceTree = "<group>"; };
 		CF266EF6288BD462009D64C5 /* SelectPetCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectPetCollectionViewController.swift; sourceTree = "<group>"; };
 		CF266EF8288BD504009D64C5 /* SelectPetCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectPetCollectionViewCell.swift; sourceTree = "<group>"; };
+		CFA26FC0288BFEC0007BF8FC /* PopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupViewController.swift; sourceTree = "<group>"; };
+		CFA26FC2288C0536007BF8FC /* UIProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIProtocol.swift; sourceTree = "<group>"; };
+		CFA26FC4288C4C84007BF8FC /* MainPetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPetViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,9 +72,11 @@
 			children = (
 				CF266EDA288BCC37009D64C5 /* AppDelegate.swift */,
 				CF266EDC288BCC37009D64C5 /* SceneDelegate.swift */,
-				CF266EDE288BCC37009D64C5 /* ViewController.swift */,
 				CF266EF4288BD422009D64C5 /* Tamagotchi.storyboard */,
+				CFA26FC4288C4C84007BF8FC /* MainPetViewController.swift */,
 				CF266EF8288BD504009D64C5 /* SelectPetCollectionViewCell.swift */,
+				CFA26FC2288C0536007BF8FC /* UIProtocol.swift */,
+				CFA26FC0288BFEC0007BF8FC /* PopupViewController.swift */,
 				CF266EF6288BD462009D64C5 /* SelectPetCollectionViewController.swift */,
 				CF266EE3288BCC3A009D64C5 /* Assets.xcassets */,
 				CF266EEE288BCDD1009D64C5 /* Pet.swift */,
@@ -154,13 +160,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF266EF7288BD462009D64C5 /* SelectPetCollectionViewController.swift in Sources */,
-				CF266EDF288BCC37009D64C5 /* ViewController.swift in Sources */,
 				CF266EF3288BD20A009D64C5 /* PetDB.swift in Sources */,
+				CFA26FC3288C0536007BF8FC /* UIProtocol.swift in Sources */,
 				CF266EEF288BCDD1009D64C5 /* Pet.swift in Sources */,
 				CF266EF9288BD504009D64C5 /* SelectPetCollectionViewCell.swift in Sources */,
 				CF266EDB288BCC37009D64C5 /* AppDelegate.swift in Sources */,
 				CF266EF1288BD105009D64C5 /* UISet.swift in Sources */,
+				CFA26FC5288C4C84007BF8FC /* MainPetViewController.swift in Sources */,
 				CF266EDD288BCC37009D64C5 /* SceneDelegate.swift in Sources */,
+				CFA26FC1288BFEC0007BF8FC /* PopupViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
