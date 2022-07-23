@@ -1,0 +1,379 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CF266EDB288BCC37009D64C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF266EDA288BCC37009D64C5 /* AppDelegate.swift */; };
+		CF266EDD288BCC37009D64C5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF266EDC288BCC37009D64C5 /* SceneDelegate.swift */; };
+		CF266EDF288BCC37009D64C5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF266EDE288BCC37009D64C5 /* ViewController.swift */; };
+		CF266EE4288BCC3A009D64C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF266EE3288BCC3A009D64C5 /* Assets.xcassets */; };
+		CF266EE7288BCC3A009D64C5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF266EE5288BCC3A009D64C5 /* LaunchScreen.storyboard */; };
+		CF266EEF288BCDD1009D64C5 /* Pet.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF266EEE288BCDD1009D64C5 /* Pet.swift */; };
+		CF266EF1288BD105009D64C5 /* UISet.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF266EF0288BD105009D64C5 /* UISet.swift */; };
+		CF266EF3288BD20A009D64C5 /* PetDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF266EF2288BD20A009D64C5 /* PetDB.swift */; };
+		CF266EF5288BD422009D64C5 /* Tamagotchi.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF266EF4288BD422009D64C5 /* Tamagotchi.storyboard */; };
+		CF266EF7288BD462009D64C5 /* SelectPetCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF266EF6288BD462009D64C5 /* SelectPetCollectionViewController.swift */; };
+		CF266EF9288BD504009D64C5 /* SelectPetCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF266EF8288BD504009D64C5 /* SelectPetCollectionViewCell.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		CF266ED7288BCC37009D64C5 /* Tamagotchi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tamagotchi.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF266EDA288BCC37009D64C5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CF266EDC288BCC37009D64C5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		CF266EDE288BCC37009D64C5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CF266EE3288BCC3A009D64C5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CF266EE6288BCC3A009D64C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CF266EE8288BCC3A009D64C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CF266EEE288BCDD1009D64C5 /* Pet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pet.swift; sourceTree = "<group>"; };
+		CF266EF0288BD105009D64C5 /* UISet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISet.swift; sourceTree = "<group>"; };
+		CF266EF2288BD20A009D64C5 /* PetDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetDB.swift; sourceTree = "<group>"; };
+		CF266EF4288BD422009D64C5 /* Tamagotchi.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tamagotchi.storyboard; sourceTree = "<group>"; };
+		CF266EF6288BD462009D64C5 /* SelectPetCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectPetCollectionViewController.swift; sourceTree = "<group>"; };
+		CF266EF8288BD504009D64C5 /* SelectPetCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectPetCollectionViewCell.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CF266ED4288BCC37009D64C5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CF266ECE288BCC37009D64C5 = {
+			isa = PBXGroup;
+			children = (
+				CF266ED9288BCC37009D64C5 /* Tamagotchi */,
+				CF266ED8288BCC37009D64C5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CF266ED8288BCC37009D64C5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CF266ED7288BCC37009D64C5 /* Tamagotchi.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CF266ED9288BCC37009D64C5 /* Tamagotchi */ = {
+			isa = PBXGroup;
+			children = (
+				CF266EDA288BCC37009D64C5 /* AppDelegate.swift */,
+				CF266EDC288BCC37009D64C5 /* SceneDelegate.swift */,
+				CF266EDE288BCC37009D64C5 /* ViewController.swift */,
+				CF266EF4288BD422009D64C5 /* Tamagotchi.storyboard */,
+				CF266EF8288BD504009D64C5 /* SelectPetCollectionViewCell.swift */,
+				CF266EF6288BD462009D64C5 /* SelectPetCollectionViewController.swift */,
+				CF266EE3288BCC3A009D64C5 /* Assets.xcassets */,
+				CF266EEE288BCDD1009D64C5 /* Pet.swift */,
+				CF266EF0288BD105009D64C5 /* UISet.swift */,
+				CF266EF2288BD20A009D64C5 /* PetDB.swift */,
+				CF266EE5288BCC3A009D64C5 /* LaunchScreen.storyboard */,
+				CF266EE8288BCC3A009D64C5 /* Info.plist */,
+			);
+			path = Tamagotchi;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CF266ED6288BCC37009D64C5 /* Tamagotchi */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CF266EEB288BCC3A009D64C5 /* Build configuration list for PBXNativeTarget "Tamagotchi" */;
+			buildPhases = (
+				CF266ED3288BCC37009D64C5 /* Sources */,
+				CF266ED4288BCC37009D64C5 /* Frameworks */,
+				CF266ED5288BCC37009D64C5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Tamagotchi;
+			productName = Tamagotchi;
+			productReference = CF266ED7288BCC37009D64C5 /* Tamagotchi.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CF266ECF288BCC37009D64C5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					CF266ED6288BCC37009D64C5 = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+				};
+			};
+			buildConfigurationList = CF266ED2288BCC37009D64C5 /* Build configuration list for PBXProject "Tamagotchi" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF266ECE288BCC37009D64C5;
+			productRefGroup = CF266ED8288BCC37009D64C5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CF266ED6288BCC37009D64C5 /* Tamagotchi */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CF266ED5288BCC37009D64C5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF266EE7288BCC3A009D64C5 /* LaunchScreen.storyboard in Resources */,
+				CF266EF5288BD422009D64C5 /* Tamagotchi.storyboard in Resources */,
+				CF266EE4288BCC3A009D64C5 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CF266ED3288BCC37009D64C5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF266EF7288BD462009D64C5 /* SelectPetCollectionViewController.swift in Sources */,
+				CF266EDF288BCC37009D64C5 /* ViewController.swift in Sources */,
+				CF266EF3288BD20A009D64C5 /* PetDB.swift in Sources */,
+				CF266EEF288BCDD1009D64C5 /* Pet.swift in Sources */,
+				CF266EF9288BD504009D64C5 /* SelectPetCollectionViewCell.swift in Sources */,
+				CF266EDB288BCC37009D64C5 /* AppDelegate.swift in Sources */,
+				CF266EF1288BD105009D64C5 /* UISet.swift in Sources */,
+				CF266EDD288BCC37009D64C5 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		CF266EE5288BCC3A009D64C5 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CF266EE6288BCC3A009D64C5 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CF266EE9288BCC3A009D64C5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CF266EEA288BCC3A009D64C5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CF266EEC288BCC3A009D64C5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = V39QSCSL6T;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Tamagotchi/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Tamagotchi;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sesac.lec.Tamagotchi;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		CF266EED288BCC3A009D64C5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = V39QSCSL6T;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Tamagotchi/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Tamagotchi;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sesac.lec.Tamagotchi;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CF266ED2288BCC37009D64C5 /* Build configuration list for PBXProject "Tamagotchi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF266EE9288BCC3A009D64C5 /* Debug */,
+				CF266EEA288BCC3A009D64C5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CF266EEB288BCC3A009D64C5 /* Build configuration list for PBXNativeTarget "Tamagotchi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF266EEC288BCC3A009D64C5 /* Debug */,
+				CF266EED288BCC3A009D64C5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CF266ECF288BCC37009D64C5 /* Project object */;
+}
