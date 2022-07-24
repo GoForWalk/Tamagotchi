@@ -51,12 +51,13 @@ extension NavSet {
         nav.navigationBar.titleTextAttributes = [.foregroundColor: UISet.fontColor, .font: UIFont.systemFont(ofSize: 15, weight: .semibold)]
         nav.navigationBar.topItem?.title = backButtontitle
         nav.navigationBar.tintColor = UISet.fontColor
-        
+        nav.navigationBar.shadowImage = nil
     }
     
     func setRootNavOnProtocol(nav: UINavigationController) {
         nav.navigationBar.titleTextAttributes = [.foregroundColor: UISet.fontColor, .font: UIFont.systemFont(ofSize: 15, weight: .semibold)]
         nav.navigationBar.tintColor = UISet.fontColor
+        nav.navigationBar.shadowImage = nil
     }
 
 }

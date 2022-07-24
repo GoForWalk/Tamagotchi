@@ -57,7 +57,7 @@ class PopupViewController: UIViewController, NameLabelSet, ImageSet {
             $0.setTitleColor(UISet.fontColor, for: .normal)
             $0.titleLabel?.font = .systemFont(ofSize: 14, weight: .heavy)
             $0.layer.borderColor = UISet.fontColor.cgColor
-            $0.layer.borderWidth = 0.3
+            $0.layer.borderWidth = 0.2
         }
     }
         

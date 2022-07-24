@@ -24,7 +24,7 @@
 		CFA26FCB288D2E5E007BF8FC /* SettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA26FCA288D2E5E007BF8FC /* SettingTableViewCell.swift */; };
 		CFA26FCD288D3B65007BF8FC /* SetBossNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA26FCC288D3B64007BF8FC /* SetBossNameViewController.swift */; };
 		CFA26FD0288D8761007BF8FC /* Toast in Frameworks */ = {isa = PBXBuildFile; productRef = CFA26FCF288D8761007BF8FC /* Toast */; };
-		CFA26FD3288D8796007BF8FC /* TextFieldEffects in Frameworks */ = {isa = PBXBuildFile; productRef = CFA26FD2288D8796007BF8FC /* TextFieldEffects */; };
+		CFA26FD6288D99D7007BF8FC /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = CFA26FD5288D99D7007BF8FC /* IQKeyboardManagerSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,7 +54,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CFA26FD0288D8761007BF8FC /* Toast in Frameworks */,
-				CFA26FD3288D8796007BF8FC /* TextFieldEffects in Frameworks */,
+				CFA26FD6288D99D7007BF8FC /* IQKeyboardManagerSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,7 +119,7 @@
 			name = Tamagotchi;
 			packageProductDependencies = (
 				CFA26FCF288D8761007BF8FC /* Toast */,
-				CFA26FD2288D8796007BF8FC /* TextFieldEffects */,
+				CFA26FD5288D99D7007BF8FC /* IQKeyboardManagerSwift */,
 			);
 			productName = Tamagotchi;
 			productReference = CF266ED7288BCC37009D64C5 /* Tamagotchi.app */;
@@ -151,7 +151,7 @@
 			mainGroup = CF266ECE288BCC37009D64C5;
 			packageReferences = (
 				CFA26FCE288D8761007BF8FC /* XCRemoteSwiftPackageReference "Toast-Swift" */,
-				CFA26FD1288D8796007BF8FC /* XCRemoteSwiftPackageReference "TextFieldEffects" */,
+				CFA26FD4288D99D7007BF8FC /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
 			);
 			productRefGroup = CF266ED8288BCC37009D64C5 /* Products */;
 			projectDirPath = "";
@@ -416,12 +416,12 @@
 				minimumVersion = 5.0.0;
 			};
 		};
-		CFA26FD1288D8796007BF8FC /* XCRemoteSwiftPackageReference "TextFieldEffects" */ = {
+		CFA26FD4288D99D7007BF8FC /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/raulriera/TextFieldEffects.git";
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
 			requirement = {
-				branch = master;
-				kind = branch;
+				kind = exactVersion;
+				version = 6.5.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -432,10 +432,10 @@
 			package = CFA26FCE288D8761007BF8FC /* XCRemoteSwiftPackageReference "Toast-Swift" */;
 			productName = Toast;
 		};
-		CFA26FD2288D8796007BF8FC /* TextFieldEffects */ = {
+		CFA26FD5288D99D7007BF8FC /* IQKeyboardManagerSwift */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = CFA26FD1288D8796007BF8FC /* XCRemoteSwiftPackageReference "TextFieldEffects" */;
-			productName = TextFieldEffects;
+			package = CFA26FD4288D99D7007BF8FC /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

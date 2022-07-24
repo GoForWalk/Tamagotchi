@@ -68,7 +68,7 @@ class PetDB {
         saveBossNameAtUserDefault(bossName: "대장")
     }
     
-    func loadDate() {
+    func loadData() {
         bossName = getBossNameFromUserDefaults()
         currentPet = getCurrentPetFromUserDefaults()
     }

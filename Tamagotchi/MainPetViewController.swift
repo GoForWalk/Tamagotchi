@@ -6,8 +6,7 @@
 //
 
 import UIKit
-import Toast
-
+import IQKeyboardManagerSwift
 
 class MainPetViewController: UIViewController, ImageSet, NameLabelSet, NavSet {
 
@@ -30,10 +29,13 @@ class MainPetViewController: UIViewController, ImageSet, NameLabelSet, NavSet {
 
     @IBOutlet weak var petMainImageView: UIImageView!
     
+    @IBOutlet var seperatorViews: [UIView]!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUI()
-        petDB.loadDate()
+        petDB.loadData()
     }
     
     // setUI
@@ -110,6 +112,10 @@ class MainPetViewController: UIViewController, ImageSet, NameLabelSet, NavSet {
             $0?.font = UIFont.systemFont(ofSize: UISet.fontSize)
             $0?.borderStyle = .none
             $0?.keyboardType = .numberPad
+        }
+        
+        seperatorViews.forEach {
+            $0.backgroundColor = UISet.fontColor
         }
     }
     
@@ -199,10 +205,6 @@ class MainPetViewController: UIViewController, ImageSet, NameLabelSet, NavSet {
         navigationController?.pushViewController(vc, animated: true)
     }
     
-    
-    // 제약조건
-    //TODO: 키보드 올라가기 라이브러리로 구현
- 
     enum FoodType: String {
         case water = "물방울"
         case rice = "밥알"

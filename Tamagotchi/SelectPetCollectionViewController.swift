@@ -19,7 +19,7 @@ class SelectPetCollectionViewController: UICollectionViewController, NavSet {
         setCellSize()
         setRootNavOnProtocol(nav: self.navigationController!)
         setNav()
-        petDB.loadDate()
+        petDB.loadData()
     }
     
     func setNav() {

@@ -14,6 +14,7 @@ class SetBossNameViewController: UIViewController, NavSet {
     var petDB = PetDB.shared
     
     @IBOutlet weak var bossNameTextField: UITextField!
+    @IBOutlet weak var seperatorView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,14 +32,14 @@ class SetBossNameViewController: UIViewController, NavSet {
         title = "\(petDB.getBossName())님 이름 정하기"
         setNavOnProtocol(nav: self.navigationController!, backButtontitle: "설정")
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "저장", style: .plain, target: self, action: #selector(saveBossName))
-        
-        
     }
     
     func setTextField() {
         bossNameTextField.textColor = UISet.fontColor
         bossNameTextField.borderStyle = .none
         bossNameTextField.backgroundColor = UISet.bgColor
+        
+        seperatorView.backgroundColor = UISet.fontColor
     }
     
     func setData() {
