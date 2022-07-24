@@ -10,6 +10,8 @@ import Toast
 
 class SelectPetCollectionViewController: UICollectionViewController, NavSet {
 
+    @IBOutlet var bgView: UICollectionView!
+    
     var petDB = PetDB.shared
         
     static let identifier = "SelectPetCollectionViewController"
@@ -20,11 +22,16 @@ class SelectPetCollectionViewController: UICollectionViewController, NavSet {
         setRootNavOnProtocol(nav: self.navigationController!)
         setNav()
         petDB.loadData()
+        bgView.backgroundColor = UISet.bgColor
     }
     
     func setNav() {
         print(petDB.hasCurrentPet())
         petDB.hasCurrentPet() ? setTitle(str: "다마고치 변경하기") : setTitle(str: "다마고치 선택하기")
+        
+        let barAppearance = UINavigationBarAppearance()
+        barAppearance.backgroundColor = UISet.bgColor
+        navigationItem.scrollEdgeAppearance = barAppearance
     }
     
     func setTitle(str: String) {

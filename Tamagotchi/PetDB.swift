@@ -73,7 +73,6 @@ class PetDB {
         currentPet = getCurrentPetFromUserDefaults()
     }
     
-    // TODO: UserDefault 사용
     func saveCurrentPetAtUserDefault(currentPet: Pet?){
         UserDefaults.standard.set(currentPet?.petDataAsArray, forKey: currentPetID)
     }

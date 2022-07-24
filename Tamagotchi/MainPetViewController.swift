@@ -69,6 +69,10 @@ class MainPetViewController: UIViewController, ImageSet, NameLabelSet, NavSet {
         setRootNavOnProtocol(nav: self.navigationController!)
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "person.circle"), style: .plain, target: self, action: #selector(pushSettingVC))
+        
+        let barAppearance = UINavigationBarAppearance()
+        barAppearance.backgroundColor = UISet.bgColor
+        navigationItem.scrollEdgeAppearance = barAppearance
     }
     
     func setButtons() {

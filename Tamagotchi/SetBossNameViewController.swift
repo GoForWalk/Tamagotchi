@@ -32,6 +32,10 @@ class SetBossNameViewController: UIViewController, NavSet {
         title = "\(petDB.getBossName())님 이름 정하기"
         setNavOnProtocol(nav: self.navigationController!, backButtontitle: "설정")
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "저장", style: .plain, target: self, action: #selector(saveBossName))
+        
+        let barAppearance = UINavigationBarAppearance()
+        barAppearance.backgroundColor = UISet.bgColor
+        navigationItem.scrollEdgeAppearance = barAppearance
     }
     
     func setTextField() {
