@@ -21,6 +21,7 @@ class PopupViewController: UIViewController, NameLabelSet, ImageSet {
     @IBOutlet var popUpButtons: [UIButton]!
         
     var currentPet: Pet?
+    let petDB = PetDB.shared
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -85,10 +86,17 @@ class PopupViewController: UIViewController, NameLabelSet, ImageSet {
         dismiss(animated: true)
     }
     
-    
     @IBAction func startButtonTapped(_ sender: UIButton) {
         
+        guard let vc = UIStoryboard(name: UISet.storyboardID, bundle: nil).instantiateViewController(withIdentifier: MainPetViewController.identifier) as? MainPetViewController, let currentPet = currentPet else { return }
+        let nav = UINavigationController(rootViewController: vc)
+                
+        petDB.setCurrentPet(petType: currentPet.petType)
         
+        nav.modalPresentationStyle = .fullScreen
+        nav.modalTransitionStyle = .crossDissolve
+        
+        present(nav, animated: true)
     }
     
     

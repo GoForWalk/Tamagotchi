@@ -11,7 +11,6 @@ enum PetType: Int{
     case 따끔따끔 = 1
     case 방실방실
     case 반짝반짝
-    
 }
 
 struct Pet {
@@ -20,13 +19,13 @@ struct Pet {
     var waterNum: Int = 0
     var riceNum: Int = 0
     var calLevel: Int {
-        return (waterNum / 5) + (waterNum / 2)
+        return Int((riceNum / 5) + (waterNum / 2))
     }
     
     var lv: Int {
         if (0..<10).contains(calLevel) { return 1 }
         else if calLevel >= 100 { return 10 }
-        else {return calLevel % 10 }
+        else {return calLevel / 10 }
     }
     
     var imageName: String {
@@ -35,9 +34,5 @@ struct Pet {
     
     var presentationImageName: String {
         return "\(petType.rawValue)-6"
-    }
-    
-    var talk: [String] = [
-        
-    ]
+    }    
 }

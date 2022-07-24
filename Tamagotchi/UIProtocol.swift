@@ -15,12 +15,7 @@ protocol ImageSet {
 extension ImageSet {
     
     func setImageViewToCircle(imageView: UIImageView) {
-
-        imageView.layer.borderWidth = 2.0
-        imageView.layer.masksToBounds = false
-        imageView.layer.cornerRadius = imageView.frame.width / 2
         imageView.layer.borderColor = UISet.fontColor.cgColor
-        imageView.clipsToBounds = true
     }
 }
 

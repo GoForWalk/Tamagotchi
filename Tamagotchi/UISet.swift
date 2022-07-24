@@ -15,6 +15,8 @@ struct UISet {
     static let noImage: String = "noImage"
     static let bubbleImage: String = "bubble"
     
+    static let storyboardID: String = "Tamagotchi"
+    
 }
 
 class NameLabel: UILabel {

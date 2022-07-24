@@ -9,7 +9,7 @@ import UIKit
 
 class SelectPetCollectionViewController: UICollectionViewController {
 
-    var petDB: PetDB = PetDB()
+    var petDB = PetDB.shared
         
     static let identifier = "SelectPetCollectionViewController"
     
@@ -28,9 +28,9 @@ class SelectPetCollectionViewController: UICollectionViewController {
         
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SelectPetCollectionViewCell.identifier, for: indexPath) as? SelectPetCollectionViewCell else { return UICollectionViewCell() }
                 
-        if(0...petDB.petList.count - 1).contains(indexPath.row) {
+        if(0...petDB.getPetList().count - 1).contains(indexPath.row) {
             
-            let currentPet: Pet? = petDB.petList[indexPath.row]
+            let currentPet: Pet? = petDB.getPetList()[indexPath.row]
             cell.configureCell(pet: currentPet)
             
         } else {
@@ -62,12 +62,12 @@ class SelectPetCollectionViewController: UICollectionViewController {
         guard let vc = UIStoryboard(name: "Tamagotchi", bundle: nil).instantiateViewController(withIdentifier: PopupViewController.identifier)
                 as? PopupViewController else { return }
         
-        if !(0...petDB.petList.count - 1).contains(indexPath.row) {
+        if !(0...petDB.getPetList().count - 1).contains(indexPath.row) {
             // 토스트: 아직 준비중인 다마고치입니다.
             return
         }
         
-        vc.currentPet = petDB.petList[indexPath.row]
+        vc.currentPet = petDB.getPetList()[indexPath.row]
         
         vc.modalPresentationStyle = .overCurrentContext
         vc.modalTransitionStyle = .crossDissolve
