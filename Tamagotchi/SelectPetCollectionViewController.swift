@@ -61,7 +61,7 @@ class SelectPetCollectionViewController: UICollectionViewController, NavSet {
     func setCellSize() {
         let layout = UICollectionViewFlowLayout()
         
-        let spacing: CGFloat = 16
+        let spacing: CGFloat = 14
         let numOfCell: CGFloat = 3
         let numOfSpace: CGFloat = numOfCell + 1
         
