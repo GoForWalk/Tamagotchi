@@ -38,3 +38,25 @@ extension NameLabelSet {
         
     }
 }
+
+protocol NavSet {
+
+    func setNavOnProtocol(nav: UINavigationController, backButtontitle: String)
+    func setRootNavOnProtocol(nav: UINavigationController)
+}
+
+extension NavSet {
+    
+    func setNavOnProtocol(nav: UINavigationController, backButtontitle: String) {
+        nav.navigationBar.titleTextAttributes = [.foregroundColor: UISet.fontColor, .font: UIFont.systemFont(ofSize: 15, weight: .semibold)]
+        nav.navigationBar.topItem?.title = backButtontitle
+        nav.navigationBar.tintColor = UISet.fontColor
+        
+    }
+    
+    func setRootNavOnProtocol(nav: UINavigationController) {
+        nav.navigationBar.titleTextAttributes = [.foregroundColor: UISet.fontColor, .font: UIFont.systemFont(ofSize: 15, weight: .semibold)]
+        nav.navigationBar.tintColor = UISet.fontColor
+    }
+
+}

@@ -15,6 +15,7 @@ class SelectPetCollectionViewCell: UICollectionViewCell, NameLabelSet, ImageSet 
     @IBOutlet weak var petNameLabel: NameLabel!
         
     func configureCell(pet: Pet? = nil) {
+        
         setImageViewToCircle(imageView: petImageView)
         setNameLabel(nameLabel: petNameLabel)
 

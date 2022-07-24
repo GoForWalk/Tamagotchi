@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MainPetViewController: UIViewController, ImageSet, NameLabelSet {
+class MainPetViewController: UIViewController, ImageSet, NameLabelSet, NavSet {
 
     static let identifier = "MainPetViewController"
     
@@ -46,6 +46,7 @@ class MainPetViewController: UIViewController, ImageSet, NameLabelSet {
     
     override func viewWillAppear(_ animated: Bool) {
         randomTalk()
+        resetData()
     }
     
     func randomTalk() {
@@ -60,6 +61,8 @@ class MainPetViewController: UIViewController, ImageSet, NameLabelSet {
     
     func setNav(petDB: PetDB) {
         title = "\(petDB.getBossName())님의 다마고치"
+        setRootNavOnProtocol(nav: self.navigationController!)
+        
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "person.circle"), style: .plain, target: self, action: #selector(pushSettingVC))
     }
     
@@ -119,6 +122,7 @@ class MainPetViewController: UIViewController, ImageSet, NameLabelSet {
     
     func resetData() {
         let currentPet = petDB.getCurrentPet()!
+        title = "\(petDB.getBossName())님의 다마고치"
         
         petEatLabel.text = "Lv\(currentPet.lv) ∙ 밥알 \(currentPet.riceNum)개 ∙ 물방울 \(currentPet.waterNum)개"
         print(currentPet.imageName, currentPet.calLevel)
@@ -181,7 +185,9 @@ class MainPetViewController: UIViewController, ImageSet, NameLabelSet {
     @objc
     func pushSettingVC() {
         //TODO: 상세 셋팅 페이지 연결
+        let vc = UIStoryboard(name: UISet.storyboardID, bundle: nil).instantiateViewController(withIdentifier: SettingTableViewController.identifier)
         
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     

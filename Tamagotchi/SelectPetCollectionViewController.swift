@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SelectPetCollectionViewController: UICollectionViewController {
+class SelectPetCollectionViewController: UICollectionViewController, NavSet {
 
     var petDB = PetDB.shared
         
@@ -16,6 +16,17 @@ class SelectPetCollectionViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setCellSize()
+        setRootNavOnProtocol(nav: self.navigationController!)
+        setNav()
+    }
+    
+    func setNav() {
+        print(petDB.hasCurrentPet())
+        petDB.hasCurrentPet() ? setTitle(str: "다마고치 변경하기") : setTitle(str: "다마고치 선택하기")
+    }
+    
+    func setTitle(str: String) {
+        title = str
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -23,9 +34,7 @@ class SelectPetCollectionViewController: UICollectionViewController {
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
-        print(#function + " \(indexPath.row)")
-        
+                
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SelectPetCollectionViewCell.identifier, for: indexPath) as? SelectPetCollectionViewCell else { return UICollectionViewCell() }
                 
         if(0...petDB.getPetList().count - 1).contains(indexPath.row) {
@@ -67,7 +76,17 @@ class SelectPetCollectionViewController: UICollectionViewController {
             return
         }
         
-        vc.currentPet = petDB.getPetList()[indexPath.row]
+        if !petDB.hasCurrentPet() {
+            vc.currentPet = petDB.getPetList()[indexPath.row]
+            
+        } else {
+            guard let tempPet = petDB.getCurrentPet() else { return }
+            
+            petDB.setCurrentPet(petType: petDB.getPetList()[indexPath.row].petType, waterNum: tempPet.waterNum, riceNum: tempPet.riceNum)
+            
+            vc.currentPet = petDB.getCurrentPet()
+            
+        }
         
         vc.modalPresentationStyle = .overCurrentContext
         vc.modalTransitionStyle = .crossDissolve

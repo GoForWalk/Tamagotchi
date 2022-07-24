@@ -32,7 +32,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9hl-nB-jpC" customClass="NameLabel" customModule="Tamagotchi" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="156" width="152" height="27"/>
+                                            <rect key="frame" x="55.5" y="156" width="41.5" height="27"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="aVk-nL-Hnp"/>
                                             </constraints>
@@ -48,10 +48,8 @@
                                         </imageView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="trailing" secondItem="9hl-nB-jpC" secondAttribute="trailing" id="1Od-92-agS"/>
                                         <constraint firstItem="9hl-nB-jpC" firstAttribute="centerX" secondItem="FkF-YV-Van" secondAttribute="centerX" id="7Vu-sR-PLd"/>
                                         <constraint firstItem="kY1-5c-wSb" firstAttribute="centerX" secondItem="FkF-YV-Van" secondAttribute="centerX" id="ABS-si-x8Q"/>
-                                        <constraint firstItem="9hl-nB-jpC" firstAttribute="leading" secondItem="FkF-YV-Van" secondAttribute="leading" id="Ic6-fB-sQ7"/>
                                         <constraint firstItem="kY1-5c-wSb" firstAttribute="width" secondItem="FkF-YV-Van" secondAttribute="width" id="YkK-ot-pua"/>
                                         <constraint firstItem="9hl-nB-jpC" firstAttribute="top" secondItem="kY1-5c-wSb" secondAttribute="bottom" constant="4" id="fge-zD-Zy3"/>
                                         <constraint firstAttribute="bottom" secondItem="9hl-nB-jpC" secondAttribute="bottom" id="lVv-x4-pc6"/>
@@ -177,6 +175,7 @@
                         <outlet property="petNameLabel" destination="vHf-R7-qJX" id="AMX-vi-JCv"/>
                         <outlet property="popUpView" destination="5DZ-T7-YTU" id="Vkq-rz-QkN"/>
                         <outlet property="seperatorView" destination="USw-KP-ysV" id="bho-2W-tiC"/>
+                        <outlet property="startButton" destination="yb7-1g-0g8" id="9nU-z2-gG4"/>
                         <outletCollection property="popUpButtons" destination="ERe-jy-BWh" collectionClass="NSMutableArray" id="UVR-mK-0dj"/>
                         <outletCollection property="popUpButtons" destination="yb7-1g-0g8" collectionClass="NSMutableArray" id="xS6-Nz-su4"/>
                     </connections>
@@ -342,33 +341,101 @@
             </objects>
             <point key="canvasLocation" x="2579.7101449275365" y="-490.17857142857139"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Setting Table View Controller-->
         <scene sceneID="Go8-t1-IWu">
             <objects>
-                <tableViewController id="WeC-XH-NKJ" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="SettingTableViewController" id="WeC-XH-NKJ" customClass="SettingTableViewController" customModule="Tamagotchi" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="BrI-BO-RkI">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="bRg-Ta-Jga">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="SettingTableViewCell" textLabel="4tk-h5-s5w" detailTextLabel="nei-mm-KCC" imageView="gp6-O2-U3z" style="IBUITableViewCellStyleValue1" id="bRg-Ta-Jga" customClass="SettingTableViewCell" customModule="Tamagotchi" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bRg-Ta-Jga" id="exa-v3-xx2">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="385.5" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4tk-h5-s5w">
+                                            <rect key="frame" x="54" y="15" width="25" height="14.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="nei-mm-KCC">
+                                            <rect key="frame" x="344.5" y="15" width="33" height="14.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="pencil" catalog="system" id="gp6-O2-U3z">
+                                            <rect key="frame" x="21.5" y="14" width="17.5" height="15.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </imageView>
+                                    </subviews>
                                 </tableViewCellContentView>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <connections>
+                                    <outlet property="backView" destination="exa-v3-xx2" id="tPx-tG-8WW"/>
+                                    <outlet property="settingDetailLabel" destination="nei-mm-KCC" id="f75-Q7-ubX"/>
+                                    <outlet property="settingImageView" destination="gp6-O2-U3z" id="pXX-fv-LcT"/>
+                                    <outlet property="settingMainLabel" destination="4tk-h5-s5w" id="IE6-ig-nMv"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
+                        <sections/>
                         <connections>
                             <outlet property="dataSource" destination="WeC-XH-NKJ" id="MWN-3W-u34"/>
                             <outlet property="delegate" destination="WeC-XH-NKJ" id="fzd-BN-WyS"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="bgView" destination="BrI-BO-RkI" id="R3d-ne-zv4"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cVM-dK-hQ8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3762" y="-465"/>
+        </scene>
+        <!--Set Boss Name View Controller-->
+        <scene sceneID="sR3-d4-QX9">
+            <objects>
+                <viewController storyboardIdentifier="SetBossNameViewController" id="XMB-nX-lf6" customClass="SetBossNameViewController" customModule="Tamagotchi" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="csM-FV-Q0I">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qDi-J3-9mG">
+                                <rect key="frame" x="20" y="76" width="374" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="DRI-11-K4b"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="bossNameJustTapped:" destination="XMB-nX-lf6" eventType="editingDidBegin" id="Zwu-J7-GID"/>
+                                    <action selector="keyboardReturnTapped:" destination="XMB-nX-lf6" eventType="editingDidEnd" id="IQp-gP-Pgx"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="s6V-2z-OHC"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="s6V-2z-OHC" firstAttribute="trailing" secondItem="qDi-J3-9mG" secondAttribute="trailing" constant="20" id="k4a-Kh-s5e"/>
+                            <constraint firstItem="qDi-J3-9mG" firstAttribute="top" secondItem="s6V-2z-OHC" secondAttribute="top" constant="32" id="kBC-bn-n26"/>
+                            <constraint firstItem="qDi-J3-9mG" firstAttribute="leading" secondItem="s6V-2z-OHC" secondAttribute="leading" constant="20" id="pwL-9q-s3F"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bossNameTextField" destination="qDi-J3-9mG" id="93a-Qt-ZWW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lnI-0Z-uye" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4847" y="-453"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="XgK-3o-sa6">
@@ -393,6 +460,7 @@
         <image name="bubble" width="222" height="142"/>
         <image name="drop.circle" catalog="system" width="128" height="121"/>
         <image name="leaf.circle" catalog="system" width="128" height="121"/>
+        <image name="pencil" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

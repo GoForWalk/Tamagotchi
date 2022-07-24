@@ -37,7 +37,7 @@ class PetDB {
     func setCurrentPet(petType: PetType, waterNum: Int = 0, riceNum: Int = 0) {
         currentPet = Pet(petType: petType, waterNum: waterNum, riceNum: riceNum)
     }
-    
+        
     func addFoodAndWater(waterNum: Int = 0, riceNum: Int = 0) {
         guard let currentPet = currentPet else {
             return
@@ -48,6 +48,11 @@ class PetDB {
     
     func getCurrentPet() -> Pet? {
         return currentPet
+    }
+    
+    func hasCurrentPet() -> Bool {
+        if currentPet == nil { return false}
+        return true
     }
     
     // TODO: UserDefault 사용
