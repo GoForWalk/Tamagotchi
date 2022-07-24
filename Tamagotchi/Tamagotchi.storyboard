@@ -239,6 +239,9 @@
                                         <rect key="frame" x="0.0" y="0.0" width="127" height="32"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="returnKeyboardTapped:" destination="xE1-Ba-tjS" eventType="editingDidEnd" id="g4B-xR-gET"/>
+                                        </connections>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dRj-Vh-lTJ">
                                         <rect key="frame" x="135" y="0.0" width="72" height="32"/>
@@ -263,6 +266,9 @@
                                         <rect key="frame" x="0.0" y="0.0" width="127" height="32"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="returnKeyboardTapped:" destination="xE1-Ba-tjS" eventType="editingDidEnd" id="A41-a3-iYz"/>
+                                        </connections>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lDK-cy-lls">
                                         <rect key="frame" x="135" y="0.0" width="72" height="32"/>

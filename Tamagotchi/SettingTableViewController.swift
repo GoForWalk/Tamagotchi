@@ -109,7 +109,30 @@ class SettingTableViewController: UITableViewController, NavSet {
     
     func resetData() {
         
+        let alert = UIAlertController(title: "데이터 초기화", message: "정말 다시 처음부터 시작하실 건가용?", preferredStyle: .alert)
+        
+        let no = UIAlertAction(title: "아냐!!", style: .default)
+        let yes = UIAlertAction(title: "삭제 ㅠㅠ", style: .destructive) { _ in
+            self.petDB.resetData()
+            self.goToSelectVC()
+        }
+        
+        alert.addAction(no)
+        alert.addAction(yes)
+        
+        present(alert, animated: true)
     }
     
-    
+    func goToSelectVC() {
+        
+        guard let vc = UIStoryboard(name: UISet.storyboardID, bundle: nil).instantiateViewController(withIdentifier: SelectPetCollectionViewController.identifier) as? SelectPetCollectionViewController else { return }
+        
+        let nav = UINavigationController(rootViewController: vc)
+        
+        nav.modalPresentationStyle = .fullScreen
+        nav.modalTransitionStyle = .crossDissolve
+        
+        present(nav, animated: true)
+        
+    }
 }

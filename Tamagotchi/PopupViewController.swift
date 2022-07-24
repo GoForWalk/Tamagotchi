@@ -70,7 +70,6 @@ class PopupViewController: UIViewController, NameLabelSet, ImageSet {
         petDB.hasCurrentPet() ? setButtonTitle(str: "변경하기") : setButtonTitle(str: "시작하기")
         
         guard let currentPet = currentPet else {
-            // 나중에 토스트 띄우기
             return
         }
         
@@ -95,17 +94,7 @@ class PopupViewController: UIViewController, NameLabelSet, ImageSet {
     }
     
     @IBAction func startButtonTapped(_ sender: UIButton) {
-        
-//        guard let vc = UIStoryboard(name: UISet.storyboardID, bundle: nil).instantiateViewController(withIdentifier: MainPetViewController.identifier) as? MainPetViewController, let currentPet = currentPet else { return }
-//        let nav = UINavigationController(rootViewController: vc)
-//
-//        petDB.setCurrentPet(petType: currentPet.petType)
-//
-//        nav.modalPresentationStyle = .fullScreen
-//        nav.modalTransitionStyle = .crossDissolve
-//
-//        present(nav, animated: true)
-    
+
         // iOS13+ SceneDelegate를 쓸 때 동작하는 코드
         // 앱을 처음 실행하는 것 처럼 동작하게 한다.
         // SceneDelegate 밖에서 window에 접근하는 방법

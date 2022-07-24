@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Toast
 
 class SelectPetCollectionViewController: UICollectionViewController, NavSet {
 
@@ -18,6 +19,7 @@ class SelectPetCollectionViewController: UICollectionViewController, NavSet {
         setCellSize()
         setRootNavOnProtocol(nav: self.navigationController!)
         setNav()
+        petDB.loadDate()
     }
     
     func setNav() {
@@ -73,6 +75,8 @@ class SelectPetCollectionViewController: UICollectionViewController, NavSet {
         
         if !(0...petDB.getPetList().count - 1).contains(indexPath.row) {
             // 토스트: 아직 준비중인 다마고치입니다.
+            
+            self.view.makeToast("아직 준비중인 다마고치입니다.", position: .center)
             return
         }
         

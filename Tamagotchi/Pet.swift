@@ -34,5 +34,10 @@ struct Pet {
     
     var presentationImageName: String {
         return "\(petType.rawValue)-6"
-    }    
+    }
+    
+    var petDataAsArray: [Int] {
+        let rawValue: Int = petType.rawValue
+        return [rawValue, waterNum, riceNum]
+    }
 }

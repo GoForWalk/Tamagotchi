@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import Toast
+
 
 class MainPetViewController: UIViewController, ImageSet, NameLabelSet, NavSet {
 
@@ -31,6 +33,7 @@ class MainPetViewController: UIViewController, ImageSet, NameLabelSet, NavSet {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUI()
+        petDB.loadDate()
     }
     
     // setUI
@@ -75,8 +78,7 @@ class MainPetViewController: UIViewController, ImageSet, NameLabelSet, NavSet {
             $0?.setTitleColor(UISet.fontColor, for: .normal)
             $0?.clipsToBounds = true
             $0?.layer.cornerRadius = 8
-//            $0?.configuration?.contentInsets = NSDirectionalEdgeInsets(top: 2, leading: 2, bottom: 2, trailing: 2)
-//            $0?.configuration?.imagePadding = 2
+            // TODO: 다른 패딩 코드 찾아보기...
             $0?.imageEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 6)
             $0?.layer.borderWidth = 1
             $0?.layer.borderColor = UISet.fontColor.cgColor
@@ -142,6 +144,11 @@ class MainPetViewController: UIViewController, ImageSet, NameLabelSet, NavSet {
         addFoodAndWater(textField: waterDrinkTextField, maxInt: 50, foodType: .water)
     }
     
+    @IBAction func returnKeyboardTapped(_ sender: UITextField) {
+        sender.resignFirstResponder()
+    }
+    
+    
     func addWaterNum(addNum: Int) {
         petDB.addFoodAndWater(waterNum: addNum)
         waterDrinkTextField.text = ""
@@ -158,14 +165,18 @@ class MainPetViewController: UIViewController, ImageSet, NameLabelSet, NavSet {
                 
         guard let addString = textField.text?.trimmingCharacters(in: .whitespacesAndNewlines), !addString.isEmpty else {
             addFoodAsType(foodType: foodType, addNum: 1, textField: textField)
+            textField.resignFirstResponder()
             return
         }
         
         guard let addNum = Int(addString), (0..<maxInt).contains(addNum) else {
-            // TODO: Toast 을 foodType은 maxInt를 넘을수 없습니다.
+            self.view.makeToast("\(foodType.rawValue)은 \(maxInt - 1)을 초과할 수 없습니다.", duration: 2.0, position: .center)
+            textField.text = ""
+            textField.resignFirstResponder()
             return
         }
         
+        textField.resignFirstResponder()
         addFoodAsType(foodType: foodType, addNum: addNum, textField: textField)
     }
     
@@ -178,13 +189,11 @@ class MainPetViewController: UIViewController, ImageSet, NameLabelSet, NavSet {
         case .rice:
             petDB.addFoodAndWater(riceNum: addNum)
         }
-        textField.text = ""
         resetData()
     }
     
     @objc
     func pushSettingVC() {
-        //TODO: 상세 셋팅 페이지 연결
         let vc = UIStoryboard(name: UISet.storyboardID, bundle: nil).instantiateViewController(withIdentifier: SettingTableViewController.identifier)
         
         navigationController?.pushViewController(vc, animated: true)
