@@ -58,7 +58,7 @@ class SetBossNameViewController: UIViewController, NavSet {
     func saveBossName() {
         
         guard let newBossName = bossNameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines), !newBossName.isEmpty, newBossName != petDB.getBossName() else {
-            // TODO: Toast
+                self.view.makeToast("이름을 다시 입력해주세요!", position: .center)
             return }
         
         petDB.setBossName(newBossName: newBossName)

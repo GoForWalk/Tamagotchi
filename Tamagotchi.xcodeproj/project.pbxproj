@@ -334,6 +334,7 @@
 				DEVELOPMENT_TEAM = V39QSCSL6T;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Tamagotchi/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "정세헌";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Tamagotchi;
@@ -364,6 +365,7 @@
 				DEVELOPMENT_TEAM = V39QSCSL6T;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Tamagotchi/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "정세헌";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Tamagotchi;

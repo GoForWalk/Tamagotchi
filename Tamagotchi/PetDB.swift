@@ -12,7 +12,6 @@ class PetDB {
     static let shared = PetDB()
     
     private init() {}
-    // 나중에 접근 메서드 만들기 -> 프로퍼티는 private로 변경
     private var bossName: String = "대장"
     private var currentPet: Pet?
     

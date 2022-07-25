@@ -74,9 +74,7 @@ class SelectPetCollectionViewController: UICollectionViewController, NavSet {
         guard let vc = UIStoryboard(name: "Tamagotchi", bundle: nil).instantiateViewController(withIdentifier: PopupViewController.identifier)
                 as? PopupViewController else { return }
         
-        if !(0...petDB.getPetList().count - 1).contains(indexPath.row) {
-            // 토스트: 아직 준비중인 다마고치입니다.
-            
+        if !(0...petDB.getPetList().count - 1).contains(indexPath.row) {            
             self.view.makeToast("아직 준비중인 다마고치입니다.", position: .center)
             return
         }

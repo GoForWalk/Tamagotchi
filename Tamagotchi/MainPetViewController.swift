@@ -98,7 +98,6 @@ class MainPetViewController: UIViewController, ImageSet, NameLabelSet, NavSet {
         }
     }
     
-    // TODO: 라이브러리로 이쁘게 구현
     func setTextFields() {
         let textFields = [riceEatTextField, waterDrinkTextField]
         
