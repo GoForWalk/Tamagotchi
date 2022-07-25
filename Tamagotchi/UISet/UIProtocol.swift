@@ -45,7 +45,6 @@ protocol NavSet {
 }
 
 extension NavSet {
-    
     func setNavOnProtocol(nav: UINavigationController, backButtontitle: String, navItem: UINavigationItem) {
         nav.navigationBar.titleTextAttributes = [.foregroundColor: UISet.fontColor, .font: UIFont.systemFont(ofSize: 15, weight: .semibold)]
         nav.navigationBar.topItem?.title = backButtontitle
@@ -55,6 +54,8 @@ extension NavSet {
         let barAppearance = UINavigationBarAppearance()
         barAppearance.backgroundColor = UISet.bgColor
         navItem.scrollEdgeAppearance = barAppearance
+        
+        print("testCommit")
     }
     
     func setRootNavOnProtocol(nav: UINavigationController, navItem: UINavigationItem) {
