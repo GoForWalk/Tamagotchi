@@ -17,10 +17,6 @@ class SettingTableViewCell: UITableViewCell {
     @IBOutlet weak var settingImageView: UIImageView!
     
     func configureCell() {
-        setCellUI()
-    }
-    
-    func setCellUI() {
         settingImageView.tintColor = UISet.fontColor
         settingDetailLabel.textColor = UISet.fontColor
         

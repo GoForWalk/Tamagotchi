@@ -80,25 +80,73 @@
 		CF266ED9288BCC37009D64C5 /* Tamagotchi */ = {
 			isa = PBXGroup;
 			children = (
+				CF266EF4288BD422009D64C5 /* Tamagotchi.storyboard */,
 				CF266EDA288BCC37009D64C5 /* AppDelegate.swift */,
 				CF266EDC288BCC37009D64C5 /* SceneDelegate.swift */,
-				CF266EF4288BD422009D64C5 /* Tamagotchi.storyboard */,
-				CFA26FCC288D3B64007BF8FC /* SetBossNameViewController.swift */,
-				CFA26FCA288D2E5E007BF8FC /* SettingTableViewCell.swift */,
-				CFA26FC6288D1381007BF8FC /* SettingTableViewController.swift */,
-				CFA26FC4288C4C84007BF8FC /* MainPetViewController.swift */,
-				CF266EF8288BD504009D64C5 /* SelectPetCollectionViewCell.swift */,
-				CFA26FC2288C0536007BF8FC /* UIProtocol.swift */,
-				CFA26FC0288BFEC0007BF8FC /* PopupViewController.swift */,
-				CF266EF6288BD462009D64C5 /* SelectPetCollectionViewController.swift */,
-				CF266EE3288BCC3A009D64C5 /* Assets.xcassets */,
-				CF266EEE288BCDD1009D64C5 /* Pet.swift */,
-				CF266EF0288BD105009D64C5 /* UISet.swift */,
-				CF266EF2288BD20A009D64C5 /* PetDB.swift */,
+				CF74A5CF288E2AB500C49D9B /* DB */,
+				CF74A5CB288E2A5B00C49D9B /* Main */,
+				CF74A5CE288E2AA800C49D9B /* PopUp */,
+				CF74A5CC288E2A7600C49D9B /* SelectCollection */,
+				CF74A5CA288E2A4C00C49D9B /* Setting */,
+				CF74A5CD288E2A9700C49D9B /* UISet */,
 				CF266EE5288BCC3A009D64C5 /* LaunchScreen.storyboard */,
+				CF266EE3288BCC3A009D64C5 /* Assets.xcassets */,
 				CF266EE8288BCC3A009D64C5 /* Info.plist */,
 			);
 			path = Tamagotchi;
+			sourceTree = "<group>";
+		};
+		CF74A5CA288E2A4C00C49D9B /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				CFA26FCC288D3B64007BF8FC /* SetBossNameViewController.swift */,
+				CFA26FCA288D2E5E007BF8FC /* SettingTableViewCell.swift */,
+				CFA26FC6288D1381007BF8FC /* SettingTableViewController.swift */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		CF74A5CB288E2A5B00C49D9B /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				CFA26FC4288C4C84007BF8FC /* MainPetViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		CF74A5CC288E2A7600C49D9B /* SelectCollection */ = {
+			isa = PBXGroup;
+			children = (
+				CF266EF8288BD504009D64C5 /* SelectPetCollectionViewCell.swift */,
+				CF266EF6288BD462009D64C5 /* SelectPetCollectionViewController.swift */,
+			);
+			path = SelectCollection;
+			sourceTree = "<group>";
+		};
+		CF74A5CD288E2A9700C49D9B /* UISet */ = {
+			isa = PBXGroup;
+			children = (
+				CFA26FC2288C0536007BF8FC /* UIProtocol.swift */,
+				CF266EF0288BD105009D64C5 /* UISet.swift */,
+			);
+			path = UISet;
+			sourceTree = "<group>";
+		};
+		CF74A5CE288E2AA800C49D9B /* PopUp */ = {
+			isa = PBXGroup;
+			children = (
+				CFA26FC0288BFEC0007BF8FC /* PopupViewController.swift */,
+			);
+			path = PopUp;
+			sourceTree = "<group>";
+		};
+		CF74A5CF288E2AB500C49D9B /* DB */ = {
+			isa = PBXGroup;
+			children = (
+				CF266EEE288BCDD1009D64C5 /* Pet.swift */,
+				CF266EF2288BD20A009D64C5 /* PetDB.swift */,
+			);
+			path = DB;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

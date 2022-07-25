@@ -254,7 +254,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="returnKeyboardTapped:" destination="xE1-Ba-tjS" eventType="editingDidEnd" id="g4B-xR-gET"/>
+                                            <action selector="returnKeyboardTapped:" destination="xE1-Ba-tjS" eventType="editingDidEndOnExit" id="q1A-ak-MC0"/>
                                         </connections>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dRj-Vh-lTJ">
@@ -281,7 +281,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
-                                            <action selector="returnKeyboardTapped:" destination="xE1-Ba-tjS" eventType="editingDidEnd" id="A41-a3-iYz"/>
+                                            <action selector="returnKeyboardTapped:" destination="xE1-Ba-tjS" eventType="editingDidEndOnExit" id="FHF-4j-6xO"/>
                                         </connections>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lDK-cy-lls">

@@ -14,6 +14,11 @@ class MainPetViewController: UIViewController, ImageSet, NameLabelSet, NavSet {
     
     var petDB = PetDB.shared
     
+    enum FoodType: String {
+        case water = "물방울"
+        case rice = "밥알"
+    }
+    
     @IBOutlet var mainView: UIView!
     @IBOutlet weak var lineLabel: UILabel!
     
@@ -203,8 +208,4 @@ class MainPetViewController: UIViewController, ImageSet, NameLabelSet, NavSet {
         navigationController?.pushViewController(vc, animated: true)
     }
     
-    enum FoodType: String {
-        case water = "물방울"
-        case rice = "밥알"
-    }
 }
