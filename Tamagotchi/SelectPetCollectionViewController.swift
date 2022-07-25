@@ -19,19 +19,13 @@ class SelectPetCollectionViewController: UICollectionViewController, NavSet {
     override func viewDidLoad() {
         super.viewDidLoad()
         setCellSize()
-        setRootNavOnProtocol(nav: self.navigationController!)
+        setRootNavOnProtocol(nav: self.navigationController!, navItem: self.navigationItem)
         setNav()
-        petDB.loadData()
         bgView.backgroundColor = UISet.bgColor
     }
     
     func setNav() {
-        print(petDB.hasCurrentPet())
         petDB.hasCurrentPet() ? setTitle(str: "다마고치 변경하기") : setTitle(str: "다마고치 선택하기")
-        
-        let barAppearance = UINavigationBarAppearance()
-        barAppearance.backgroundColor = UISet.bgColor
-        navigationItem.scrollEdgeAppearance = barAppearance
     }
     
     func setTitle(str: String) {

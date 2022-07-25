@@ -35,7 +35,6 @@ class MainPetViewController: UIViewController, ImageSet, NameLabelSet, NavSet {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUI()
-        petDB.loadData()
     }
     
     // setUI
@@ -66,13 +65,9 @@ class MainPetViewController: UIViewController, ImageSet, NameLabelSet, NavSet {
     
     func setNav(petDB: PetDB) {
         title = "\(petDB.getBossName())님의 다마고치"
-        setRootNavOnProtocol(nav: self.navigationController!)
+        setRootNavOnProtocol(nav: self.navigationController!, navItem: self.navigationItem)
         
-        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "person.circle"), style: .plain, target: self, action: #selector(pushSettingVC))
-        
-        let barAppearance = UINavigationBarAppearance()
-        barAppearance.backgroundColor = UISet.bgColor
-        navigationItem.scrollEdgeAppearance = barAppearance
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "person.circle"), style: .plain, target: self, action: #selector(pushSettingVC))        
     }
     
     func setButtons() {

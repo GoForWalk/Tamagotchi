@@ -19,7 +19,6 @@ extension ImageSet {
     }
 }
 
-
 protocol NameLabelSet {
     
     func setNameLabel(nameLabel: UILabel)
@@ -41,23 +40,31 @@ extension NameLabelSet {
 
 protocol NavSet {
 
-    func setNavOnProtocol(nav: UINavigationController, backButtontitle: String)
-    func setRootNavOnProtocol(nav: UINavigationController)
+    func setNavOnProtocol(nav: UINavigationController, backButtontitle: String, navItem: UINavigationItem)
+    func setRootNavOnProtocol(nav: UINavigationController, navItem: UINavigationItem)
 }
 
 extension NavSet {
     
-    func setNavOnProtocol(nav: UINavigationController, backButtontitle: String) {
+    func setNavOnProtocol(nav: UINavigationController, backButtontitle: String, navItem: UINavigationItem) {
         nav.navigationBar.titleTextAttributes = [.foregroundColor: UISet.fontColor, .font: UIFont.systemFont(ofSize: 15, weight: .semibold)]
         nav.navigationBar.topItem?.title = backButtontitle
         nav.navigationBar.tintColor = UISet.fontColor
         nav.navigationBar.shadowImage = nil
+        
+        let barAppearance = UINavigationBarAppearance()
+        barAppearance.backgroundColor = UISet.bgColor
+        navItem.scrollEdgeAppearance = barAppearance
     }
     
-    func setRootNavOnProtocol(nav: UINavigationController) {
+    func setRootNavOnProtocol(nav: UINavigationController, navItem: UINavigationItem) {
         nav.navigationBar.titleTextAttributes = [.foregroundColor: UISet.fontColor, .font: UIFont.systemFont(ofSize: 15, weight: .semibold)]
         nav.navigationBar.tintColor = UISet.fontColor
         nav.navigationBar.shadowImage = nil
+        
+        let barAppearance = UINavigationBarAppearance()
+        barAppearance.backgroundColor = UISet.bgColor
+        navItem.scrollEdgeAppearance = barAppearance
     }
 
 }

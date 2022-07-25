@@ -58,7 +58,7 @@ class SettingTableViewController: UITableViewController, NavSet {
     func setUI() {
         bgView.backgroundColor = UISet.bgColor
         title = "설정"
-        setNavOnProtocol(nav: self.navigationController!, backButtontitle: " ")
+        setNavOnProtocol(nav: self.navigationController!, backButtontitle: " ", navItem: self.navigationItem)
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
