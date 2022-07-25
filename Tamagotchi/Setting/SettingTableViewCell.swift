@@ -19,6 +19,7 @@ class SettingTableViewCell: UITableViewCell {
     func configureCell() {
         settingImageView.tintColor = UISet.fontColor
         settingDetailLabel.textColor = UISet.fontColor
+        settingMainLabel.textColor = UIColor.label
         
         self.layer.borderColor = UISet.fontColor.cgColor
         self.layer.borderWidth = 0.1
