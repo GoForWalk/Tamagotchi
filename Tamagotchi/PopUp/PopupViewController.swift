@@ -66,7 +66,6 @@ class PopupViewController: UIViewController, NameLabelSet, ImageSet {
     }
     
     func setData() {
-        print(petDB.hasCurrentPet())
         petDB.hasCurrentPet() ? setButtonTitle(str: "변경하기") : setButtonTitle(str: "시작하기")
         
         guard let currentPet = currentPet else {
@@ -104,8 +103,7 @@ class PopupViewController: UIViewController, NameLabelSet, ImageSet {
         
         guard let vc = UIStoryboard(name: UISet.storyboardID, bundle: nil).instantiateViewController(withIdentifier: MainPetViewController.identifier) as? MainPetViewController, let currentPet = currentPet else { return }
         
-        print("currentPet: ", currentPet)
-        petDB.setCurrentPet(petType: currentPet.petType, waterNum: currentPet.waterNum, riceNum: currentPet.riceNum)
+            petDB.setCurrentPet(petType: currentPet.petType, waterNum: currentPet.waterNum, riceNum: currentPet.riceNum)
         
         let nav = UINavigationController(rootViewController: vc)
         

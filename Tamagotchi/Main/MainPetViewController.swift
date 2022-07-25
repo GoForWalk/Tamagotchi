@@ -125,8 +125,6 @@ class MainPetViewController: UIViewController, ImageSet, NameLabelSet, NavSet {
     func setData() {
         
         guard let currentPet = petDB.getCurrentPet() else { return }
-        print(currentPet)
-        
         petNameLabel.text = "\(currentPet.petType) 다마고치"
         resetData()
     }
@@ -134,11 +132,9 @@ class MainPetViewController: UIViewController, ImageSet, NameLabelSet, NavSet {
     func resetData() {
         let currentPet = petDB.getCurrentPet()!
         title = "\(petDB.getBossName())님의 다마고치"
-        
+
         petEatLabel.text = "Lv\(currentPet.lv) ∙ 밥알 \(currentPet.riceNum)개 ∙ 물방울 \(currentPet.waterNum)개"
-        print(currentPet.imageName, currentPet.calLevel)
         petMainImageView.image = UIImage(named: currentPet.imageName)
-        
     }
     
     @IBAction func viewTapped(_ sender: UITapGestureRecognizer) {

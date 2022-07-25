@@ -47,7 +47,6 @@ class SettingTableViewController: UITableViewController, NavSet {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(#function, Self.identifier)
         setUI()
     }
     

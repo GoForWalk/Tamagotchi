@@ -46,26 +46,25 @@ protocol NavSet {
 
 extension NavSet {
     func setNavOnProtocol(nav: UINavigationController, backButtontitle: String, navItem: UINavigationItem) {
-        nav.navigationBar.titleTextAttributes = [.foregroundColor: UISet.fontColor, .font: UIFont.systemFont(ofSize: 15, weight: .semibold)]
         nav.navigationBar.topItem?.title = backButtontitle
-        nav.navigationBar.tintColor = UISet.fontColor
-        nav.navigationBar.shadowImage = nil
-        
-        let barAppearance = UINavigationBarAppearance()
-        barAppearance.backgroundColor = UISet.bgColor
-        navItem.scrollEdgeAppearance = barAppearance
-        
-        print("testCommit")
+        setRootNavOnProtocol(nav: nav, navItem: navItem)
     }
     
     func setRootNavOnProtocol(nav: UINavigationController, navItem: UINavigationItem) {
-        nav.navigationBar.titleTextAttributes = [.foregroundColor: UISet.fontColor, .font: UIFont.systemFont(ofSize: 15, weight: .semibold)]
+        
         nav.navigationBar.tintColor = UISet.fontColor
-        nav.navigationBar.shadowImage = nil
         
         let barAppearance = UINavigationBarAppearance()
         barAppearance.backgroundColor = UISet.bgColor
+        barAppearance.titleTextAttributes = [.foregroundColor: UISet.fontColor, .font: UIFont.systemFont(ofSize: 15, weight: .semibold)]
+        
+        let barButtonItemAppearance = UIBarButtonItemAppearance()
+        barButtonItemAppearance.normal.titleTextAttributes = [.foregroundColor: UISet.fontColor, .font: UIFont.systemFont(ofSize: 15, weight: .semibold)]
+        
+        barAppearance.buttonAppearance = barButtonItemAppearance
+        
         navItem.scrollEdgeAppearance = barAppearance
+        navItem.standardAppearance = barAppearance
     }
 
 }
