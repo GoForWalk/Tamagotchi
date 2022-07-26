@@ -15,7 +15,7 @@ struct UISet {
     static let noImage: String = "noImage"
     static let bubbleImage: String = "bubble"
     
-    static let storyboardID: String = "Tamagotchi"
+    static var storyboardID: String { return "Tamagotchi" }
     
 }
 

@@ -15,14 +15,15 @@ class PetDB {
     private var bossName: String = "대장"
     private var currentPet: Pet?
     
-    private let currentPetID = "currentPet"
-    private let bossNameID = "bossName"
+    // Read-Only Computed Property
+    private var currentPetID: String { return "currentPet" }
+    private var bossNameID: String { return "bossName" }
     
-    private var petList: [Pet] = [
+    private var petList: [Pet] { return [
         Pet(petType: .따끔따끔),
         Pet(petType: .반짝반짝),
         Pet(petType: .방실방실)
-    ]
+    ] }
     
     func getPetList() -> [Pet] {
         return petList

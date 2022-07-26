@@ -110,7 +110,6 @@ class PopupViewController: UIViewController, NameLabelSet, ImageSet {
         // window에 접근
         sceneDelegate?.window?.rootViewController = nav
         sceneDelegate?.window?.makeKeyAndVisible()
-
     }
     
     

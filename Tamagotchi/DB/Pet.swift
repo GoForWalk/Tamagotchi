@@ -18,11 +18,10 @@ struct Pet {
     var petType: PetType
     var waterNum: Int = 0
     var riceNum: Int = 0
-    var calLevel: Int {
-        return Int((riceNum / 5) + (waterNum / 2))
-    }
     
     var lv: Int {
+        let calLevel = ((riceNum / 5) + (waterNum / 2))
+        
         if (0..<10).contains(calLevel) { return 1 }
         else if calLevel >= 100 { return 10 }
         else {return calLevel / 10 }
