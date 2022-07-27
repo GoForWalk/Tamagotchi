@@ -103,7 +103,7 @@ class PopupViewController: UIViewController, NameLabelSet, ImageSet {
         
         guard let vc = UIStoryboard(name: UISet.storyboardID, bundle: nil).instantiateViewController(withIdentifier: MainPetViewController.identifier) as? MainPetViewController, let currentPet = currentPet else { return }
         
-            petDB.setCurrentPet(petType: currentPet.petType, waterNum: currentPet.waterNum, riceNum: currentPet.riceNum)
+        petDB.setCurrentPet(petType: currentPet.petType, waterNum: currentPet.waterNum, riceNum: currentPet.riceNum)
         
         let nav = UINavigationController(rootViewController: vc)
         

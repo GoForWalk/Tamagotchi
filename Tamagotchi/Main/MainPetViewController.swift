@@ -153,23 +153,10 @@ class MainPetViewController: UIViewController, ImageSet, NameLabelSet, NavSet {
         sender.resignFirstResponder()
     }
     
-    
-    func addWaterNum(addNum: Int) {
-        petDB.addFoodAndWater(waterNum: addNum)
-        waterDrinkTextField.text = ""
-        resetData()
-    }
-    
-    func addRiceNum(addNum: Int) {
-        petDB.addFoodAndWater(riceNum: addNum)
-        riceEatTextField.text = ""
-        resetData()
-    }
-    
     func addFoodAndWater(textField: UITextField, maxInt: Int, foodType: FoodType) {
                 
         guard let addString = textField.text?.trimmingCharacters(in: .whitespacesAndNewlines), !addString.isEmpty else {
-            addFoodAsType(foodType: foodType, addNum: 1, textField: textField)
+            addFoodAsType(foodType: foodType, addNum: 1)
             textField.resignFirstResponder()
             return
         }
@@ -182,10 +169,10 @@ class MainPetViewController: UIViewController, ImageSet, NameLabelSet, NavSet {
         }
         
         textField.resignFirstResponder()
-        addFoodAsType(foodType: foodType, addNum: addNum, textField: textField)
+        addFoodAsType(foodType: foodType, addNum: addNum)
     }
     
-    func addFoodAsType(foodType: FoodType, addNum: Int, textField: UITextField){
+    func addFoodAsType(foodType: FoodType, addNum: Int){
         
         switch foodType {
         case .water:
