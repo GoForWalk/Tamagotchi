@@ -8,21 +8,26 @@
 import UIKit
 import Toast
 
-class SelectPetCollectionViewController: UICollectionViewController, NavSet {
+class SelectPetCollectionViewController: UICollectionViewController, NavSet, SetViewController {
 
-    @IBOutlet var bgView: UICollectionView!
+    static let identifier = "SelectPetCollectionViewController"
     
     var petDB = PetDB.shared
         
-    static let identifier = "SelectPetCollectionViewController"
+    @IBOutlet var bgView: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setCellSize()
+        setUI()
+    }
+    
+    func setUI() {
+        collectionView.collectionViewLayout = setCellSize()
         setRootNavOnProtocol(nav: self.navigationController!, navItem: self.navigationItem)
         setNav()
         bgView.backgroundColor = UISet.bgColor
     }
+
     
     func setNav() {
         petDB.hasCurrentPet() ? setTitle(str: "다마고치 변경하기") : setTitle(str: "다마고치 선택하기")
@@ -52,7 +57,7 @@ class SelectPetCollectionViewController: UICollectionViewController, NavSet {
         return cell
     }
     
-    func setCellSize() {
+    func setCellSize() -> UICollectionViewFlowLayout {
         let layout = UICollectionViewFlowLayout()
         
         let spacing: CGFloat = 14
@@ -66,7 +71,7 @@ class SelectPetCollectionViewController: UICollectionViewController, NavSet {
         layout.itemSize = CGSize(width: width, height: width * 1.3)
         layout.sectionInset = UIEdgeInsets(top: spacing, left: spacing, bottom: spacing, right: spacing)
         
-        collectionView.collectionViewLayout = layout
+        return layout
     }
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {

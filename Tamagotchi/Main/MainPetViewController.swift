@@ -8,7 +8,7 @@
 import UIKit
 import IQKeyboardManagerSwift
 
-class MainPetViewController: UIViewController, ImageSet, NameLabelSet, NavSet {
+class MainPetViewController: UIViewController, ImageSet, NameLabelSet, NavSet, SetViewController {
 
     static let identifier = "MainPetViewController"
     
@@ -54,6 +54,7 @@ class MainPetViewController: UIViewController, ImageSet, NameLabelSet, NavSet {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
         randomTalk()
         resetData()
     }
@@ -77,44 +78,44 @@ class MainPetViewController: UIViewController, ImageSet, NameLabelSet, NavSet {
     
     func setButtons() {
         
-        let buttons = [riceEatButton, waterDrinkButton]
+        let buttons: [UIButton] = [riceEatButton, waterDrinkButton]
         
         buttons.forEach {
-            $0?.titleLabel?.font = UIFont.systemFont(ofSize: UISet.fontSize)
-            $0?.setTitleColor(UISet.fontColor, for: .normal)
-            $0?.clipsToBounds = true
-            $0?.layer.cornerRadius = 8
+            $0.titleLabel?.font = .systemFont(ofSize: UISet.fontSize)
+            $0.setTitleColor(UISet.fontColor, for: .normal)
+            $0.clipsToBounds = true
+            $0.layer.cornerRadius = 8
             // TODO: 다른 패딩 코드 찾아보기...
-            $0?.imageEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 6)
-            $0?.layer.borderWidth = 1
-            $0?.layer.borderColor = UISet.fontColor.cgColor
-            $0?.imageView?.tintColor = UISet.fontColor
+            $0.imageEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 6)
+            $0.layer.borderWidth = 1
+            $0.layer.borderColor = UISet.fontColor.cgColor
+            $0.imageView?.tintColor = UISet.fontColor
         }
         
     }
     
     func setLabels() {
-        let labels = [petTalkLabel, petEatLabel]
+        let labels: [UILabel] = [petTalkLabel, petEatLabel]
         
         labels.forEach {
-            $0?.textColor = UISet.fontColor
-            $0?.font = UIFont.systemFont(ofSize: UISet.fontSize, weight: .regular)
-            $0?.textAlignment = .center
+            $0.textColor = UISet.fontColor
+            $0.font = .systemFont(ofSize: UISet.fontSize, weight: .regular)
+            $0.textAlignment = .center
         }
     }
     
     func setTextFields() {
-        let textFields = [riceEatTextField, waterDrinkTextField]
+        let textFields: [UITextField] = [riceEatTextField, waterDrinkTextField]
         
         riceEatTextField.placeholder = "밥주세용"
         waterDrinkTextField.placeholder = "물주세용"
         
         textFields.forEach {
-            $0?.textColor = UISet.fontColor
-            $0?.textAlignment = .center
-            $0?.font = UIFont.systemFont(ofSize: UISet.fontSize)
-            $0?.borderStyle = .none
-            $0?.keyboardType = .numberPad
+            $0.textColor = UISet.fontColor
+            $0.textAlignment = .center
+            $0.font = .systemFont(ofSize: UISet.fontSize)
+            $0.borderStyle = .none
+            $0.keyboardType = .numberPad
         }
         
         seperatorViews.forEach {
@@ -123,7 +124,6 @@ class MainPetViewController: UIViewController, ImageSet, NameLabelSet, NavSet {
     }
     
     func setData() {
-        
         guard let currentPet = petDB.getCurrentPet() else { return }
         petNameLabel.text = "\(currentPet.petType) 다마고치"
         resetData()

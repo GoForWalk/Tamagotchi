@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SetBossNameViewController: UIViewController, NavSet {
+class SetBossNameViewController: UIViewController, NavSet, SetViewController {
 
     static let identifier = "SetBossNameViewController"
     
@@ -62,7 +62,13 @@ class SetBossNameViewController: UIViewController, NavSet {
             return }
         
         petDB.setBossName(newBossName: newBossName)
-    
+        
+        let navViewControllers = navigationController!.viewControllers
+                
+        guard let rootVC = navViewControllers[navViewControllers.count - 2] as? SettingTableViewController else { return }
+        
+        rootVC.tableView.reloadData()
+        
         navigationController?.popViewController(animated: true)
     }
     

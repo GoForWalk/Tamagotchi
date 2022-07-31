@@ -11,9 +11,10 @@ class PetDB {
     
     static let shared = PetDB()
     
-    private init() {}
     private var bossName: String = "대장"
     private var currentPet: Pet?
+    
+    private let defaultUserName: String = "대장"
     
     // Read-Only Computed Property
     private var currentPetID: String { return "currentPet" }
@@ -25,6 +26,9 @@ class PetDB {
         Pet(petType: .방실방실)
     ] }
     
+    private init() {}
+    
+    // methods
     func getPetList() -> [Pet] {
         return petList
     }
@@ -45,7 +49,7 @@ class PetDB {
     }
         
     func addFoodAndWater(waterNum: Int = 0, riceNum: Int = 0) {
-        guard let currentPet = currentPet else {
+        guard let currentPet = getCurrentPet() else {
             return
         }
         
@@ -65,7 +69,7 @@ class PetDB {
     func resetData() {
         currentPet = nil
         saveCurrentPetAtUserDefault(currentPet: nil)
-        saveBossNameAtUserDefault(bossName: "대장")
+        saveBossNameAtUserDefault(bossName: defaultUserName)
     }
     
     func loadData() {
@@ -94,6 +98,6 @@ class PetDB {
     }
     
     func getBossNameFromUserDefaults() -> String {
-        return UserDefaults.standard.string(forKey: bossNameID) ?? "대장"
+        return UserDefaults.standard.string(forKey: bossNameID) ?? defaultUserName
     }
 }

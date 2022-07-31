@@ -40,18 +40,21 @@ extension NameLabelSet {
 
 protocol NavSet {
 
-    func setNavOnProtocol(nav: UINavigationController, backButtontitle: String, navItem: UINavigationItem)
-    func setRootNavOnProtocol(nav: UINavigationController, navItem: UINavigationItem)
+    func setNavOnProtocol(nav: UINavigationController?, backButtontitle: String, navItem: UINavigationItem)
+    func setRootNavOnProtocol(nav: UINavigationController?, navItem: UINavigationItem)
 }
 
 extension NavSet {
-    func setNavOnProtocol(nav: UINavigationController, backButtontitle: String, navItem: UINavigationItem) {
+    func setNavOnProtocol(nav: UINavigationController?, backButtontitle: String, navItem: UINavigationItem) {
+        
+        guard let nav = nav else { return }
         nav.navigationBar.topItem?.title = backButtontitle
         setRootNavOnProtocol(nav: nav, navItem: navItem)
     }
     
-    func setRootNavOnProtocol(nav: UINavigationController, navItem: UINavigationItem) {
-        
+    func setRootNavOnProtocol(nav: UINavigationController?, navItem: UINavigationItem) {
+
+        guard let nav = nav else { return }
         nav.navigationBar.tintColor = UISet.fontColor
         
         let barAppearance = UINavigationBarAppearance()
@@ -67,4 +70,10 @@ extension NavSet {
         navItem.standardAppearance = barAppearance
     }
 
+}
+
+protocol SetViewController {
+    static var identifier: String { get }
+    
+    func setUI()
 }

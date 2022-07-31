@@ -7,10 +7,12 @@
 
 import UIKit
 
-class PopupViewController: UIViewController, NameLabelSet, ImageSet {
+class PopupViewController: UIViewController, NameLabelSet, ImageSet, SetViewController {
     
     static let identifier = "PopupViewController"
 
+    let petDB = PetDB.shared
+    
     @IBOutlet var backgroundView: UIView!
     @IBOutlet weak var popUpView: UIView!
     @IBOutlet weak var petImageView: UIImageView!
@@ -22,7 +24,6 @@ class PopupViewController: UIViewController, NameLabelSet, ImageSet {
     @IBOutlet weak var startButton: UIButton!
     
     var currentPet: Pet?
-    let petDB = PetDB.shared
     
     override func viewDidLoad() {
         super.viewDidLoad()

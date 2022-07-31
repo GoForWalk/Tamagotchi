@@ -49,15 +49,11 @@ class SettingTableViewController: UITableViewController, NavSet {
         super.viewDidLoad()
         setUI()
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        tableView.reloadData()
-    }
-    
+        
     func setUI() {
         bgView.backgroundColor = UISet.bgColor
         title = "설정"
-        setNavOnProtocol(nav: self.navigationController!, backButtontitle: " ", navItem: self.navigationItem)
+        setNavOnProtocol(nav: self.navigationController, backButtontitle: " ", navItem: self.navigationItem)
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -79,12 +75,13 @@ class SettingTableViewController: UITableViewController, NavSet {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+                
         switch indexPath.row {
-        case 0:
+        case Setting.bossNameSetting.rawValue:
             popBossNameVC()
-        case 1:
+        case Setting.petTypeChange.rawValue:
             resetPetType()
-        case 2:
+        case Setting.dataReset.rawValue:
             resetData()
         default:
             return
