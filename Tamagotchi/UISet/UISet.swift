@@ -5,10 +5,9 @@
 //  Created by sae hun chung on 2022/07/23.
 //
 
-import Foundation
 import UIKit
 
-struct UISet {
+enum UISet {
     static let bgColor: UIColor = UIColor(red: 245/255, green: 252/255, blue: 252/255, alpha: 1)
     static let fontColor: UIColor = UIColor(red: 77/255, green: 106/255, blue: 120/255, alpha: 1)
     static let fontSize: CGFloat = 13
@@ -19,7 +18,7 @@ struct UISet {
     
 }
 
-class NameLabel: UILabel {
+final class NameLabel: UILabel {
     
     @IBInspectable var topInset: CGFloat = 2.0
     @IBInspectable var bottomInset: CGFloat = 2.0

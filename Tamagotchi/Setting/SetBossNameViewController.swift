@@ -7,11 +7,9 @@
 
 import UIKit
 
-class SetBossNameViewController: UIViewController, NavSet, SetViewController {
-
-    static let identifier = "SetBossNameViewController"
+class SetBossNameViewController: UIViewController, NavSet {
     
-    var petDB = PetDB.shared
+    let petDB = PetDB.shared
     
     @IBOutlet weak var bossNameTextField: UITextField!
     @IBOutlet weak var seperatorView: UIView!
@@ -71,6 +69,13 @@ class SetBossNameViewController: UIViewController, NavSet, SetViewController {
         
         navigationController?.popViewController(animated: true)
     }
+    
+    /*
+     1. Notification -> addobserver
+     2. protocol
+     3. closure
+     */
+    
     
     
 }

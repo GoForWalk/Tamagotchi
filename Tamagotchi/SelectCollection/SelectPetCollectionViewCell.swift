@@ -7,9 +7,9 @@
 
 import UIKit
 
-class SelectPetCollectionViewCell: UICollectionViewCell, NameLabelSet, ImageSet {
+class SelectPetCollectionViewCell: UICollectionViewCell, NameLabelSet, ImageSet, ReusableIdentifier {
         
-    static let identifier = "SelectPetCollectionViewCell"
+    static let identifier = String(describing: SelectPetCollectionViewCell.self)
     
     @IBOutlet weak var petImageView: UIImageView!
     @IBOutlet weak var petNameLabel: NameLabel!

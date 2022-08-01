@@ -39,12 +39,10 @@ enum Setting: Int, CaseIterable{
 
 class SettingTableViewController: UITableViewController, NavSet {
     
-    var petDB = PetDB.shared
+    let petDB = PetDB.shared
     
     @IBOutlet var bgView: UITableView!
     
-    static let identifier = "SettingTableViewController"
-
     override func viewDidLoad() {
         super.viewDidLoad()
         setUI()

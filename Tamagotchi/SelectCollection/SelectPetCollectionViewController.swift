@@ -8,11 +8,9 @@
 import UIKit
 import Toast
 
-class SelectPetCollectionViewController: UICollectionViewController, NavSet, SetViewController {
-
-    static let identifier = "SelectPetCollectionViewController"
+class SelectPetCollectionViewController: UICollectionViewController, NavSet {
     
-    var petDB = PetDB.shared
+    let petDB = PetDB.shared
         
     @IBOutlet var bgView: UICollectionView!
     

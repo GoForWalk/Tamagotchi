@@ -7,7 +7,7 @@
 
 import UIKit
 
-class PetDB {
+final class PetDB {
     
     static let shared = PetDB()
     
@@ -15,6 +15,8 @@ class PetDB {
     private var currentPet: Pet?
     
     private let defaultUserName: String = "대장"
+    
+    let userDefualts = UserDefaults.standard
     
     // Read-Only Computed Property
     private var currentPetID: String { return "currentPet" }
@@ -78,15 +80,15 @@ class PetDB {
     }
     
     func saveCurrentPetAtUserDefault(currentPet: Pet?){
-        UserDefaults.standard.set(currentPet?.petDataAsArray, forKey: currentPetID)
+        userDefualts.set(currentPet?.petDataAsArray, forKey: currentPetID)
     }
     
     func saveBossNameAtUserDefault(bossName: String){
-        UserDefaults.standard.set(bossName, forKey: bossNameID)
+        userDefualts.set(bossName, forKey: bossNameID)
     }
     
     func getCurrentPetFromUserDefaults() -> Pet? {
-        guard let tempArray = UserDefaults.standard.array(forKey: currentPetID) else { return nil }
+        guard let tempArray = userDefualts.array(forKey: currentPetID) else { return nil }
         
         let rawValue = tempArray[0] as! Int
         
@@ -98,6 +100,6 @@ class PetDB {
     }
     
     func getBossNameFromUserDefaults() -> String {
-        return UserDefaults.standard.string(forKey: bossNameID) ?? defaultUserName
+        return userDefualts.string(forKey: bossNameID) ?? defaultUserName
     }
 }

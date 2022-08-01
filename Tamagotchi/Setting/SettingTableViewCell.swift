@@ -7,9 +7,9 @@
 
 import UIKit
 
-class SettingTableViewCell: UITableViewCell {
+class SettingTableViewCell: UITableViewCell, ReusableIdentifier {
 
-    static let identifier = "SettingTableViewCell"
+    static let identifier = String(describing: SettingTableViewCell.self)
     
     @IBOutlet weak var backView: UIView!
     @IBOutlet weak var settingMainLabel: UILabel!

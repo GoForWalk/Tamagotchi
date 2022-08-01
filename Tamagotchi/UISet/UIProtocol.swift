@@ -72,8 +72,15 @@ extension NavSet {
 
 }
 
-protocol SetViewController {
-    static var identifier: String { get }
+protocol ReusableIdentifier {
     
-    func setUI()
+    static var identifier: String { get }
+}
+
+extension UIViewController: ReusableIdentifier {
+    
+    static var identifier: String {
+        return String(describing: self)
+    }
+    
 }

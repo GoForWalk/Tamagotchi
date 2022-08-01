@@ -7,10 +7,8 @@
 
 import UIKit
 
-class PopupViewController: UIViewController, NameLabelSet, ImageSet, SetViewController {
+class PopupViewController: UIViewController, NameLabelSet, ImageSet {
     
-    static let identifier = "PopupViewController"
-
     let petDB = PetDB.shared
     
     @IBOutlet var backgroundView: UIView!

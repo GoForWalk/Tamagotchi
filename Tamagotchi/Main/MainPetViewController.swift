@@ -8,11 +8,9 @@
 import UIKit
 import IQKeyboardManagerSwift
 
-class MainPetViewController: UIViewController, ImageSet, NameLabelSet, NavSet, SetViewController {
-
-    static let identifier = "MainPetViewController"
+class MainPetViewController: UIViewController, ImageSet, NameLabelSet, NavSet {
     
-    var petDB = PetDB.shared
+    let petDB = PetDB.shared
     
     enum FoodType: String {
         case water = "물방울"
@@ -168,8 +166,8 @@ class MainPetViewController: UIViewController, ImageSet, NameLabelSet, NavSet, S
             return
         }
         
-        textField.resignFirstResponder()
         addFoodAsType(foodType: foodType, addNum: addNum)
+        textField.resignFirstResponder()
     }
     
     func addFoodAsType(foodType: FoodType, addNum: Int){
